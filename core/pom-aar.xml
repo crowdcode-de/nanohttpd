@@ -1,0 +1,110 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>org.nanohttpd</groupId>
+		<artifactId>nanohttpd-project</artifactId>
+		<version>2.3.2-SNAPSHOT</version>
+	</parent>
+	<artifactId>nanohttpd</artifactId>
+	<packaging>aar</packaging>
+	<name>NanoHttpd-Core</name>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.apache.httpcomponents</groupId>
+			<artifactId>httpclient</artifactId>
+			<version>4.2.5</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.httpcomponents</groupId>
+			<artifactId>httpmime</artifactId>
+			<version>4.2.5</version>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
+
+	<profiles>
+		<profile>
+			<id>windows</id>
+			<properties>
+				<platform.version>4.0.1.2</platform.version>
+				<android.sdk.path>c:\entwicklung\jdk\android-sdk</android.sdk.path>
+				<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+				<docs.directory>C:/Temp/apidocs</docs.directory>
+			</properties>
+		</profile>
+
+		<profile>
+			<id>linux</id>
+			<properties>
+				<platform.version>4.0.1.2</platform.version>
+				<android.sdk.path>/usr/java/adt-bundle-linux-x86_64/sdk</android.sdk.path>
+				<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+			</properties>
+
+		</profile>
+
+		<profile>
+			<id>ci-system</id>
+			<properties>
+				<platform.version>4.0.1.2</platform.version>
+				<android.sdk.path>/usr/java/android-sdk-linux</android.sdk.path>
+				<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+				<docs.directory>/var/www/baracus/apidocs</docs.directory>
+			</properties>
+		</profile>
+
+		<profile>
+			<id>mac</id>
+			<properties>
+				<platform.version>4.0.1.2</platform.version>
+				<android.sdk.path>/Users/heiko/Library/Android/sdk</android.sdk.path>
+				<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+			</properties>
+		</profile>
+
+		<profile>
+			<id>sign-jar</id>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-gpg-plugin</artifactId>
+						<executions>
+							<execution>
+								<id>sign-artifacts</id>
+								<phase>verify</phase>
+								<goals>
+									<goal>sign</goal>
+								</goals>
+							</execution>
+						</executions>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+	</profiles>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>com.simpligility.maven.plugins</groupId>
+				<artifactId>android-maven-plugin</artifactId>
+				<version>4.4.3</version>
+				<extensions>true</extensions>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-source-plugin</artifactId>
+				<executions>
+					<execution>
+						<goals>
+							<goal>jar</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+</project>
