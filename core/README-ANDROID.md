@@ -38,3 +38,15 @@ If you are using Android studio, you will be asked to resync the project
 ## Finally
 
 That's it. Now you can derive NanoHTTPD and start implementing
+
+# Troubleshooting
+
+## I cannot reach my emulator
+
+This is because you will have to enable a tunnel to your emulatur. See https://developer.android.com/studio/run/emulator-networking 
+for details.
+In case that your emulator does not accept the mentioned auth token, stop it, remove the token and restart. then it will have a new one.
+
+## My app does not start any more
+
+Remember, when adding privileges to the AndroidManifest.xml, you have to reinstall your app. Therefore, stop the emulator, wipe the data with DB
