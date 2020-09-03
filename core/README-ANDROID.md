@@ -45,7 +45,8 @@ That's it. Now you can derive NanoHTTPD and start implementing
 
 This is because you will have to enable a tunnel to your emulatur. See https://developer.android.com/studio/run/emulator-networking 
 for details.
-In case that your emulator does not accept the mentioned auth token, stop it, remove the token and restart. then it will have a new one.
+* In case that your emulator does not accept the mentioned auth token, stop it, remove the token and restart. then it will have a new one.
+* When you cold boot the emulator and/or wipe the data you must redo this steps.
 
 ## My app does not start any more
 
