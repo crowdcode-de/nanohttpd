@@ -42,7 +42,7 @@ import org.nanohttpd.protocols.http.NanoHTTPD;
 
 /**
  * Default strategy for creating and cleaning up temporary files.
- * <p/>
+ * 
  * <p>
  * By default, files are created by <code>File.createTempFile()</code> in the
  * directory specified.

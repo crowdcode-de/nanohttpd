@@ -73,18 +73,18 @@ import org.nanohttpd.util.IHandler;
 
 /**
  * A simple, tiny, nicely embeddable HTTP server in Java
- * <p/>
- * <p/>
+ * 
+ * 
  * NanoHTTPD
  * <p>
  * Copyright (c) 2012-2013 by Paul S. Hawke, 2001,2005-2013 by Jarno Elonen,
  * 2010 by Konstantinos Togias
  * </p>
- * <p/>
- * <p/>
+ * 
+ *
  * <b>Features + limitations: </b>
  * <ul>
- * <p/>
+ * 
  * <li>Only one Java file</li>
  * <li>Java 5 compatible</li>
  * <li>Released as open source, Modified BSD licence</li>
@@ -108,17 +108,17 @@ import org.nanohttpd.util.IHandler;
  * <li>Contains a built-in list of most common MIME types</li>
  * <li>All header names are converted to lower case so they don't vary between
  * browsers/clients</li>
- * <p/>
+ * 
  * </ul>
- * <p/>
- * <p/>
+ * 
+ * 
  * <b>How to use: </b>
  * <ul>
- * <p/>
+ * 
  * <li>Subclass and implement serve() and embed to your own program</li>
- * <p/>
+ * 
  * </ul>
- * <p/>
+ * 
  * See the separate "LICENSE.md" file for the distribution license (Modified BSD
  * licence)
  */
@@ -186,7 +186,7 @@ public abstract class NanoHTTPD {
     public static final Logger LOG = Logger.getLogger(NanoHTTPD.class.getName());
 
     /**
-     * Hashtable mapping (String)FILENAME_EXTENSION -> (String)MIME_TYPE
+     * Hashtable mapping (String)FILENAME_EXTENSION to (String)MIME_TYPE
      */
     protected static Map<String, String> MIME_TYPES;
 
@@ -226,7 +226,7 @@ public abstract class NanoHTTPD {
         } catch (IOException e) {
             LOG.log(Level.INFO, "no mime types available at " + resourceName);
         }
-    };
+    }
 
     /**
      * Creates an SSLSocketFactory for HTTPS. Pass a loaded KeyStore and an
@@ -537,8 +537,8 @@ public abstract class NanoHTTPD {
 
     /**
      * Override this to customize the server.
-     * <p/>
-     * <p/>
+     * 
+     * 
      * (By default, this returns a 404 "Not Found" plain text error response.)
      * 
      * @param session

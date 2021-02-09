@@ -63,6 +63,7 @@ public interface IHTTPSession {
      * key.
      * 
      * @deprecated use {@link #getParameters()} instead.
+     * @return mapped param
      */
     @Deprecated
     Map<String, String> getParms();

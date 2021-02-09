@@ -41,7 +41,7 @@ import org.nanohttpd.protocols.http.ClientHandler;
 
 /**
  * Default threading strategy for NanoHTTPD.
- * <p/>
+ *
  * <p>
  * By default, the server spawns a new Thread for every incoming request. These
  * are set to <i>daemon</i> status, and named according to the request number.

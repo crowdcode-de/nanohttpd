@@ -42,7 +42,7 @@ import org.nanohttpd.protocols.http.NanoHTTPD;
 
 /**
  * Default strategy for creating and cleaning up temporary files.
- * <p/>
+ * 
  * <p>
  * This class stores its files in the standard location (that is, wherever
  * <code>java.io.tmpdir</code> points to). Files are added to an internal list,
